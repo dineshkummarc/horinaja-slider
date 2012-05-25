@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>horinaja for scriptaculous or jQuery</title>
+
+	<link rel="stylesheet" href="index.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="horinaja.css" type="text/css" media="screen" />
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="ie.css" />
+	<![endif]-->	
+	<script src="http://www.google.com/jsapi"></script>
+	<script>
+	  google.load("prototype", "1");
+	  google.load("scriptaculous", "1");
+	</script>
+	<script src='class.horinaja.js' type='text/javascript'></script>
+	<script>
+	document.observe("dom:loaded", function() {	
+	<!-- horinaja -->
+	new Horinaja('demo',0.3,4,true);
+	});
+	</script>
+	
+</head>
+
+<body>
+
+	<div id="header">
+		<ul>
+			<li><a href="index.php">home</a></li>
+			<li><a href="howto.php">how-to</a></li>
+			<li><a href="download.php">download</a></li>
+			<li><a href="http://davidmassiani.com/blog/2009/07/horinaja/">feedback</a></li>
+		</ul>
+	</div>
+	
+	<div id="logo">
+		<span><img src="logo.png" /></span>
+		<span class="right">(scriptaculous || jQuery) + horinaja</span>
+	</div>
+	
+	<div id="horinaja">
+		<div id="mascot"><img src="mascot_us.png" /></div>
+		<div id="demo" class="horinaja">
+			<ul>
+				<li class="ho_1"><img src="logo.png" alt="horinaja" /></li>
+				<li class="ho_2"><img src="code1.png" alt="code" /></li>
+				<li class="ho_3"><img src="code2.png" alt="code" /></li>
+				<li class="ho_4">
+				<a href="forceDownload.php?framework=scriptaculous" class="uno"><img src="btn_scriptaculous.png" alt="t&eacute;l&eacute;charger pour scriptaculous" /></a>
+				<a href="forceDownload.php?framework=jquery" class="deuxio"><img src="btn_jquery.png" alt="t&eacute;l&eacute;charger pour jquery" /></a>				
+				</li>
+			</ul>
+		</div>
+		<div id="possibility" class="left">
+		<img src="possibility_us.png" alt="customisable,facile a installer, innovante, cross-browser" /></div>
+		<div id="free" class="left">
+		<img src="free.png" alt="free !" /></div>
+	</div>
+	<div class="clear"></div>
+	
+	<div id="content">
+
+		<div id="howto">
+		
+			<h1>needed</h1>
+				
+				<div>
+				<h2>scriptaculous :</h2>				
+				You needed <a href="http://www.prototypejs.org/">prototypejs</a> and <a href="http://script.aculo.us/">scriptaculous</a>.
+				<br/>
+				For an easy integration of this script, i advise you to read my article : <a href="http://davidmassiani.com/blog/2009/07/load-ajax-with-google/">load ajax with google</a>.<br/>
+				Now write this code :
+				</div>
+					<code>
+					&lt;script src='path_to_your_js/class.horinaja.scriptaculous.js' type='text/javascript'&gt;&lt;/script&gt;<br/>
+					&lt;link rel="stylesheet" href="path_to_your_css/horinaja.css" type="text/css" media="screen" /&gt;
+					</code>
+				<div>
+				<h2>jQuery :</h2>
+				You needed <a href="http://www.jQuery.com/">jQuery</a>.<br/>
+				! : for this plug-in to work:<br/>
+				<a href="http://plugins.jquery.com/project/timers">timers</a> (include)<br/>
+				<a href="http://plugins.jquery.com/project/mousewheel">mousewheel</a><br/>
+				Now write this code :
+				</div>
+					<code>
+					&lt;script src='jquery.mousewheel.js' type="text/javascript"&gt;&lt;/script&gt;<br/>
+					&lt;script src='path_to_your_js/class.horinaja.jquery.js' type='text/javascript'&gt;&lt;/script&gt;<br/>
+					&lt;link rel="stylesheet" href="path_to_your_css/horinaja.css" type="text/css" media="screen" /&gt;					
+					</code>
+								
+			<h1>integration</h1>
+				<div>
+				Horinaja needed a class &quot;horinaja&quot; associate to a div, and a ul li liste :
+				</div>
+				<code>
+				&lt;div id="demo" class="horinaja"&gt;<br />
+					&lt;ul&gt;<br />
+						&lt;li&gt;&lt;!-- content 1 --&gt;&lt;/li&gt;<br />
+						&lt;li&gt;&lt;!-- content 2 --&gt;&lt;/li&gt;<br />
+						...<br />
+					&lt;/ul&gt;<br />
+				&lt;/div&gt;<br />
+				</code>
+				<div>
+				<h2>scriptaculous</h2>
+				Init Horinaja :
+				</div>
+				<code>
+				&lt;script&gt;<br />
+				document.observe("dom:loaded", function() {	<br />
+				new Horinaja('demo',0.3,4,true);<br />
+				});<br />
+				&lt;/script&gt;			
+				</code>
+				<div>
+				<h2>jQuery</h2>
+				Init Horinaja :
+				</div>
+				<code>
+				&lt;script&gt;
+				$(document).ready(function(){<br/>
+					  $('#demo').Horinaja({<br/>
+					   capture:'demo',delai:0.3,<br/>
+					   duree:4,pagination:true});<br/>
+				});<br/>
+				&lt;/script&gt;
+				</code>
+								
+			<h1>option</h1>
+				<div>
+				You can use option :<br/>
+				<h2>scriptaculous</h2>
+				<code>
+				new Horinaja(<strong>id,delay,duration,pagination</strong>);
+				</code>
+				</div>
+				<div>
+				- id is the name of your slider (a div, add to this div class="horinaja")<br/>
+				- dela	y is time to slide next (second)<br/>
+				- duration is delay for go to next (second)<br/>
+				- pagination is if you want pagination (true or false)<br/>
+				</div>
+				<div>
+				<h2>jQuery</h2>
+				<code>
+					  $(div#id).Horinaja({<strong>capture:id,delai:0.3,duree:4,pagination:true</strong>});			
+				</code>
+				</div>
+				<div>
+				- id is the name of your slider (a div, add to this div class="horinaja")<br/>
+				- delai is time to slide next (second)<br/>
+				- duree is delai for go to next (second)<br/>
+				- pagination is if you want pagination (true or false)		<br/>		
+				</div>
+				<div>ps: i'm sorry for my bad english :/, if you see a language bug, help me, send me a mail (davidmassianirennes@gmail.com).</div>
+				<div class="clear"></div>
+			</ul>
+		</div>
+
+	</div>
+	<div class="clear"></div>
+<div id="partenaires">
+<a href="http://feedmyapp.com/p/a/horinaja-horinaja-for-prototype-and-scriptaculous/11697" target="_blank"><img src="feedmyapp.png" alt="feedmyapp.com" /></a>
+<a href="http://www.kerodicas.com/noticias/websites/artigo=24115/2" target="_blank"><img src="kerodicas.png" alt="kerodicas.com"></a>
+<a href="http://www.ajaxrain.com/" target="_blank"><img src="Ajaxrain.png" alt="ajaxrain.com" /></a>
+<a href="http://abduzeedo.com/sites-week-62" target="_blank"><img src="abduzeedo.png" alt="abduzeedo.com site of week" /></a>
+<a href="http://www.welovecss.net/?p=1032" target="_blank"><img src="welovecss.png" alt="we love css" /></a>
+</div>	
+	<div id="footer">
+		<span>&copy; Massiani David 2009
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a>
+		</span>
+		<span><a href="http://www.prototypejs.org/">prototype</a></span>
+		<span><a href="http://script.aculo.us/">scriptaculous</a></span>
+		<span><a href="http://jquery.com/">jQuery</a></span>
+		<span>88587 download</span>
+	</div>
+
+</body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5537795-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</html>

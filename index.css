@@ -1,0 +1,65 @@
+*{margin:0;padding:0;font-family: Verdana, Arial, Helvetica, sans-serif;}
+
+a{text-decoration:none;}
+a:focus{outline:none;}
+a img{border:none;}
+.clear{clear:both;height:1px;display:block;width:100%;}
+::-moz-selection {background: #F9FFD1; color:#C42937;}
+ol,ul{list-style:none;}
+.left{float:left;}
+
+/* ---------------------- */
+/* ------- BODY --------- */
+/* ---------------------- */
+
+body{	background:#252121 url("horinaja.jpg") no-repeat top center;text-align:center;}
+html, body {
+margin: 0;
+padding: 0;
+}
+
+#header{background: transparent url("header.png") repeat;display:block;width:100%;height:57px;}
+#header ul{display:block;width:80%;margin: 0 auto;}
+#header ul li a{display:block;float:left;height:37px;color:white;font-size:12px;width:140px;text-align:left;padding: 20px 0 0 0;}
+#header ul li{float:left;}
+
+#logo{display:block;width:80%;margin:0 auto;height:110px;}
+#logo span{display:block;width:50%;float:left;text-align:left;margin:50px 0 0 0;}
+#logo span.right{text-align:right;color:white;font-size:12px;}
+
+#horinaja{background: transparent url("hocenter.png") repeat;display:block;width:80%;height:253px;margin:0 auto;}
+#horinaja,#demo{-moz-border-radius: 15px;-webkit-border-radius: 15px;}
+
+#mascot{display:block;width:435px;height:315px;position:absolute;top:90px;margin:0 0 0 20px;}
+#demo{display:block;width:380px;height:230px;margin:10px 0 0 150px;background: transparent url("demo.png") repeat;}
+#demo,#possiblity,#free{float:left;}
+#possibility{margin:60px 0 0 40px;}
+#free{margin: 100px 0 0 50px;}
+
+#content{display:block;width:80%;margin: 70px auto 0 auto;text-align:left;}
+#content h1{padding: 0 0 0 20px;}
+#content span{float:left;width:33%;display:block;}
+#content p{font-size:11px;color:#E7C7D5;padding: 20px 40px 20px 20px;}
+#content a{color:white;border-bottom:1px dotted white;}
+#download{color:white;font-size:12px;margin: 20px 0 0 0;}
+#content form{margin: 10px 0 0 20px;}
+
+.horinaja li.ho_1 img{margin: 100px 0 0 0;}
+.horinaja li.ho_2 img{margin: 20px 0 0 0;}
+.horinaja li.ho_3 img{margin: 20px 0 0 0;}
+.horinaja li.ho_4 a{margin: 15px 0 0 0;display:block;}.horinaja li.ho_4 a.uno{margin:30px 0 0 0;}
+
+#partenaires{float:none;clear:both;width:80%;margin: 250px auto 0 auto;position:relative;display:block;}
+#partenaires a{float:left;display:block;width:auto;height:auto;margin: 0 0 20px 20px;}
+
+#footer{padding: 30px 0 0 0;background:black;display:block;width:100%;height:57px;margin:50px 0 0 0;clear:both;}
+#footer, #footer a{font-size:11px;color:white;}
+#footer a{border-bottom:1px dotted white;}
+
+/* HOWTO */
+#howto{width:80%;background:transparent;display:block;margin:0 auto;}
+#howto div{font-size:11px;color:#E7C7D5;padding: 20px 40px 20px 20px;display:block;}
+#content h1{font-size:30px;font-weight:normal;color:#E02E82;text-transform:uppercase;}
+#howto div h2{font-size: 24px;color:white;font-weight:normal;margin: 0 0 10px 0;}
+code{font-size:11px;color:#E02E82;display:block;padding:20px 50px;background:#FEFFBE;margin: 20px 0 20px 1px;}
+code::-moz-selection {background: black; color:white;}
